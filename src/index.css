@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lexend:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Lexend", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", sans-serif;
+
+  --color-primary: #0058be;
+  --color-primary-container: #2170e4;
+  --color-on-primary: #ffffff;
+  
+  --color-secondary: #735c00;
+  --color-secondary-container: #fed01b;
+  --color-on-secondary-container: #6f5900;
+  
+  --color-tertiary: #006b2d;
+  --color-tertiary-container: #00873b;
+  --color-on-tertiary-container: #f7fff3;
+
+  --color-surface: #f8f9ff;
+  --color-on-surface: #0b1c30;
+  --color-on-surface-variant: #424754;
+  
+  --radius-xl: 1.5rem;
+  --radius-lg: 1rem;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight font-bold;
+  }
+}
+
+.chunky-button {
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.1s ease-in-out;
+}
+
+.chunky-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.exercise-card {
+  @apply border-l-4 border-tertiary shadow-lg;
+}
+
+.code-block {
+  @apply bg-slate-900 text-slate-300 font-mono text-sm leading-relaxed overflow-x-auto;
+}
